@@ -110,4 +110,22 @@ $(document).ready(function () {
 	});
 	
 
+	$('.subs-form').on('submit', function(e) {
+		e.preventDefault();
+
+		$.ajax({
+			url: '/send.php',
+			method: 'post',
+			dataType: 'html',
+			data: $(this).serialize(),
+			success: function(data){
+				$('.subs-form').append('<div class="message">Вы успешно подписались на рассылку!</div>');
+
+				setTimeout(function() {
+					$('.subs-form').find('.message').remove();
+				}, 5000);
+			}
+		});
+	});
+
 });
