@@ -100,7 +100,7 @@ textarea {
   font-family: 'Font Awesome 5 Pro';
   font-style: normal;
   font-weight: 400;
-  font-display: block;
+  font-display: swap;
   src: url("../fonts/webfonts/fa-regular-400.eot");
   src: url("../fonts/webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../fonts/webfonts/fa-regular-400.woff2") format("woff2"), url("../fonts/webfonts/fa-regular-400.woff") format("woff"), url("../fonts/webfonts/fa-regular-400.ttf") format("truetype"), url("../fonts/webfonts/fa-regular-400.svg#fontawesome") format("svg");
 }
@@ -118,7 +118,7 @@ textarea {
   font-family: 'Font Awesome 5 Pro';
   font-style: normal;
   font-weight: 900;
-  font-display: block;
+  font-display: swap;
   src: url("../fonts/webfonts/fa-solid-900.eot");
   src: url("../fonts/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../fonts/webfonts/fa-solid-900.woff2") format("woff2"), url("../fonts/webfonts/fa-solid-900.woff") format("woff"), url("../fonts/webfonts/fa-solid-900.ttf") format("truetype"), url("../fonts/webfonts/fa-solid-900.svg#fontawesome") format("svg");
 }
@@ -137,7 +137,7 @@ textarea {
   font-family: 'Font Awesome 5 Brands';
   font-style: normal;
   font-weight: 400;
-  font-display: block;
+  font-display: swap;
   src: url("../fonts/webfonts/fa-brands-400.eot");
   src: url("../fonts/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../fonts/webfonts/fa-brands-400.woff2") format("woff2"), url("../fonts/webfonts/fa-brands-400.woff") format("woff"), url("../fonts/webfonts/fa-brands-400.ttf") format("truetype"), url("../fonts/webfonts/fa-brands-400.svg#fontawesome") format("svg");
 }
@@ -155,7 +155,7 @@ textarea {
   font-family: 'Font Awesome 5 Pro';
   font-style: normal;
   font-weight: 300;
-  font-display: block;
+  font-display: swap;
   src: url("../fonts/webfonts/fa-light-300.eot");
   src: url("../fonts/webfonts/fa-light-300.eot?#iefix") format("embedded-opentype"), url("../fonts/webfonts/fa-light-300.woff2") format("woff2"), url("../fonts/webfonts/fa-light-300.woff") format("woff"), url("../fonts/webfonts/fa-light-300.ttf") format("truetype"), url("../fonts/webfonts/fa-light-300.svg#fontawesome") format("svg");
 }
@@ -12349,12 +12349,6 @@ hr {
   }
 }
 
-@media (max-width: 540px) {
-  .catalog-top .left .title {
-    font-size: 1.5rem;
-  }
-}
-
 .catalog-top .left .count {
   color: #999;
 }
@@ -12426,9 +12420,11 @@ hr {
           align-self: flex-start;
 }
 
-.catalog-item .cart:nth-child(4n),
-.catalog-item .cart-accent:nth-child(4n) {
-  margin-right: 0;
+@media (max-width: 899px) {
+  .catalog-item .cart:nth-child(4n),
+  .catalog-item .cart-accent:nth-child(4n) {
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 1200px) and (min-width: 900px) {
