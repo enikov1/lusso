@@ -383,19 +383,24 @@
       </div>
     </footer>
 
-	<script>
-		(function () {
-			var script = document.createElement(s); 
-			script.type = 'text/javascript'; 
-			script.async = true;
-			script.src = './js/libs.js';
-			var s = document.getElementsByTagName("script")[0];
-			s.parentNode.insertBefore(script, s);
-		})();
+	<script type="text/javascript">
+		function downloadJSAtOnload() {
+			var element = document.createElement("script");
+			element.src = "./js/libs.js";
+			document.body.appendChild(element);
+		}
+
+		if (window.addEventListener)
+			window.addEventListener("load", downloadJSAtOnload, false);
+		else if (window.attachEvent)
+			window.attachEvent("onload", downloadJSAtOnload);
+		else window.onload = downloadJSAtOnload;
 	</script>
 
-	
 
+	<!-- <script src="./js/libs.js" ></script> -->
+
+	<!-- <script src="./js/common.js"></script> -->
 
   </body>
 </html>
